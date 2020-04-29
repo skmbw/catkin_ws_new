@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c753fe7-c754-4173-a929-c4ef6723a4d3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1abYlQQKAcfziMGTm5YBWd4kfx6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../venv" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="talker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="learn_comm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/talker.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.talker" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c753fe7-c754-4173-a929-c4ef6723a4d3" name="Default Changelist" comment="" />
+      <created>1587005910834</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587005910834</updated>
+      <workItem from="1587005912261" duration="197000" />
+      <workItem from="1587017174704" duration="994000" />
+      <workItem from="1587022480538" duration="774000" />
+      <workItem from="1587023816173" duration="599000" />
+      <workItem from="1587024431596" duration="92000" />
+      <workItem from="1587024707333" duration="21000" />
+      <workItem from="1587025055886" duration="18000" />
+      <workItem from="1587025276867" duration="18000" />
+      <workItem from="1587025404732" duration="277000" />
+      <workItem from="1587026190789" duration="368000" />
+      <workItem from="1587027729159" duration="27000" />
+      <workItem from="1587027888821" duration="27000" />
+      <workItem from="1587027995155" duration="22000" />
+      <workItem from="1587028099719" duration="21000" />
+      <workItem from="1587028285267" duration="10000" />
+      <workItem from="1587028876126" duration="17000" />
+      <workItem from="1587028916305" duration="13000" />
+      <workItem from="1587028964848" duration="12000" />
+      <workItem from="1587029093009" duration="13000" />
+      <workItem from="1587029533224" duration="14000" />
+      <workItem from="1587029558768" duration="143000" />
+      <workItem from="1587086848994" duration="455000" />
+      <workItem from="1587088228211" duration="69000" />
+      <workItem from="1587094569689" duration="1775000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="771" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1587005999560">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="771" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1587005999560" />
+    <state width="1789" height="261" key="GridCell.Tab.0.bottom" timestamp="1587029701220">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1789" height="261" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1587029701220" />
+    <state width="1789" height="261" key="GridCell.Tab.0.center" timestamp="1587029701220">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1789" height="261" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1587029701220" />
+    <state width="1789" height="261" key="GridCell.Tab.0.left" timestamp="1587029701220">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1789" height="261" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1587029701220" />
+    <state width="1789" height="261" key="GridCell.Tab.0.right" timestamp="1587029701220">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1789" height="261" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1587029701220" />
+    <state x="475" y="175" key="SettingsEditor" timestamp="1587101547757">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="475" y="175" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1587101547757" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/learn_comm$talker.coverage" NAME="talker Coverage Results" MODIFIED="1587029693915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+  </component>
+</project>
