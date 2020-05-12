@@ -12,6 +12,12 @@ void chatterCallback(const std_msgs::String::ConstPtr& msg)
     ROS_INFO("I heard: [%s]", msg->data.c_str());
 }
 
+/**
+ * main函数入口，默认情况下这两个参数可以不用传。可以直接右键run/debug启动程序
+ * @param argc 参数长度
+ * @param argv 参数值，是字符数组
+ * @return
+ */
 int main(int argc, char **argv)
 {
     /**
