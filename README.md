@@ -24,3 +24,8 @@
 * 主要的规则就是，类名使用首字母大写的驼峰命名法，变量和函数使用小写的下划线命名法
 # python文件无法运行的问题
 * 是权限问题，至少要给+x的权限，或者a+x，或者755，777没必要
+
+# ros模块的运行
+* 可以直接在python文件中debug运行，右键运行
+* 也可以使用 rosrun package_name executable_file，例如 rosrun learn_comm talker
+* 对于C++的运行，可以使用rosrun命令，debug模式，需要在debug的configuration中配置main函数的参数
