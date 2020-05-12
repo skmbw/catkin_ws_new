@@ -27,5 +27,6 @@
 
 # ros模块的运行
 * 可以直接在python文件中debug运行，右键运行
-* 也可以使用 rosrun package_name executable_file，例如 rosrun learn_comm talker
-* 对于C++的运行，可以使用rosrun命令，debug模式，需要在debug的configuration中配置main函数的参数
+* 也可以使用 rosrun package_name executable_file，例如 rosrun learn_comm talker.py
+* 对于C++的运行，可以使用rosrun命令，rosrun learn_comm talker，talker是在CMakeLists.txt中配置的可执行文件名
+* debug模式，需要在debug的configuration中配置main函数的参数
