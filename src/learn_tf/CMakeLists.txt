@@ -11,6 +11,9 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  message_generation
+        tf
+        turtlesim
 )
 
 ## System dependencies are found with CMake's conventions
@@ -105,7 +108,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES learn_tf
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+#    CATKIN_DEPENDS roscpp rospy std_msgs message_runtime tf turtlesim
 #  DEPENDS system_lib
 )
 
@@ -134,6 +137,17 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/learn_tf_node.cpp)
+
+add_executable(${PROJECT_NAME}_turtletf_broadcaster src/turtletf_broadcaster.cpp)
+# ros的node都应该需要这个连接库
+target_link_libraries(${PROJECT_NAME}_turtletf_broadcaster
+  ${catkin_LIBRARIES}
+)
+
+add_executable(${PROJECT_NAME}_turtletf_listener src/turtletf_listener.cpp)
+target_link_libraries(${PROJECT_NAME}_turtletf_listener
+    ${catkin_LIBRARIES}
+)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

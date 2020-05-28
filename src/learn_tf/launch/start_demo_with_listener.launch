@@ -1,0 +1,19 @@
+<!--ros自带的tf变换例子，不能是启动的。第二，roslaunch所在的命令行窗口要获取焦点，否则方向键不起作用-->
+ <launch>
+    <!-- 海龟仿真器 -->
+    <node pkg="turtlesim" type="turtlesim_node" name="learn_tf_sim"/>
+
+    <!-- 键盘控制 -->
+    <node pkg="turtlesim" type="turtle_teleop_key" name="learn_tf_teleop" output="screen"/>
+
+    <!-- 两只海龟的tf广播, type就是可执行文件的名字 -->
+    <node pkg="learn_tf" type="learn_tf_turtletf_broadcaster"
+          args="/turtle1" name="turtle1_tf_broadcaster" />
+    <node pkg="learn_tf" type="learn_tf_turtletf_broadcaster"
+          args="/turtle2" name="turtle2_tf_broadcaster" />
+
+    <!-- 监听tf广播，并且控制turtle2移动 -->
+    <node pkg="learn_tf" type="learn_tf_turtletf_listener"
+          name="learn_tf_listener" />
+
+ </launch>
