@@ -1,3 +1,13 @@
+# sudo rosdep init & rosdep update，因为网络问题，无法执行的问题
+* sudo rosdep init 这个命令是下载 20-default.list这个文件，放入 /etc/ros/rosdep/sources.list.d 这个目录
+那么我们可以，手动下载后放入这个目录，就可以跳过这一步
+* rosdep update才是真正的更新，可以修改20-default.list中无法下载的http url地址，使用本地的nginx代理
+* nginx的配置文件在/etc/nginx中
+* nginx的日志文件在/var/log/nginx中
+* nginx的html文件在/usr/share/nginx/html中。或者 /var/www/html中
+* nginx的可执行文件在/usr/sbin/nginx
+* ./nginx -c /etc/nginx/nginx.conf 启动，可以指定配置文件 ./nginx -s stop 快速关闭 ./nginx -s reload 重启 ./nginx -s quit 正常停止关闭
+
 # rossrv show learn_comm/AddTwoInts 显示所有的srv信息
 * 是因为没有 source devel/setup.bash，估计是编译后要source
 * rosmsg show learn_comm/Num 也是同样的道理
