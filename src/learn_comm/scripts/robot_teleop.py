@@ -1,10 +1,9 @@
 # coding:utf-8
 
 import socket
-
-from multiprocessing import Process
-from jetbot import Robot
+# from jetbot import Robot
 import subprocess
+from multiprocessing import Process
 
 
 def handle_client(client):
@@ -145,7 +144,7 @@ if __name__ == "__main__":
     server_socket.bind(("10.70.10.112", 8000))
     server_socket.listen(128)
     print('server start success.')
-    robot = Robot()
+    robot = None
 
     while True:
         client_socket, client_address = server_socket.accept()

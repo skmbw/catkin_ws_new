@@ -6,8 +6,8 @@ from std_msgs.msg import String
 
 def talker():
     # topic 的名字叫 chatter，订阅者要订阅这个名字
-    pub = rospy.Publisher("chatter", String, queue_size=1)
-    rospy.init_node("talker", anonymous=False)  # 节点的名字叫 talker
+    pub = rospy.Publisher("/chatter", String, queue_size=5)
+    rospy.init_node("talker")  # 节点的名字叫 talker
     rate = rospy.Rate(5)
     while not rospy.is_shutdown():
         hello_str = "hello world %s" % rospy.get_time()

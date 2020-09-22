@@ -11,8 +11,8 @@ def callback(str_data):
 def listener():
     # 节点名必须是唯一的. I如果两个节点名字相同，前一个会被踢掉
     # anonymous=True 允许同时有多个listener
-    rospy.init_node("listener", anonymous=False)
-    rospy.Subscriber("chatter", String, callback, queue_size=1)
+    rospy.init_node("listener")
+    rospy.Subscriber("/chatter", String, callback)
     rospy.spin()
 
 

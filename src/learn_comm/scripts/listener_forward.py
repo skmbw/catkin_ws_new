@@ -13,11 +13,11 @@ def listener():
     # 节点名必须是唯一的. I如果两个节点名字相同，前一个会被踢掉
     # anonymous=True 允许同时有多个listener
     rospy.init_node("listener_forward")
-    rospy.Subscriber("chatter_forward", String, callback, queue_size=1)
+    rospy.Subscriber("/chatter_forward", String, callback)
     rospy.spin()
 
 
-pub = rospy.Publisher("chatter", String, queue_size=1)
+pub = rospy.Publisher("chatter", String, queue_size=10)
 
 if __name__ == '__main__':
     listener()
