@@ -6,3 +6,7 @@
 * [ROSBRIDGE_PROTOCOL](https://github.com/RobotWebTools/rosbridge_suite/blob/develop/ROSBRIDGE_PROTOCOL.md)
 * [ROSBRIDGE_API_REFERENCE_PDF](https://roslibpy.readthedocs.io/_/downloads/en/latest/pdf/)
 * [ROSBRIDGE_API_REFERENCE_HTML](https://roslibpy.readthedocs.io/en/latest/reference/index.html)
+
+### ROS节点名字的问题
+* 即使发送相同的消息，多个节点的节点名字不能重复，因为是长连接，如果断掉重连，第二次会很慢。
+* 启动rospy.Publisher，发送消息时，就是节点名字不要重复。rospy.init_node('node_name_221')
