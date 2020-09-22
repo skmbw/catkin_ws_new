@@ -11,6 +11,9 @@ def handle_client(client):
     处理客户端请求
     """
     request_bytes = client.recv(1024)
+    # data = self.__client.recv(1024) # 判断空
+    # if data == b"":
+    # 	print('这里返回二进制空，不知道在哪儿看到的返回None，感觉逻辑合理，浪费很多时间')
     if request_bytes == b'':
         print('request body is null.')
         client.close()
@@ -19,51 +22,51 @@ def handle_client(client):
     print("request data:", request_data)
 
     rsp = ''
-    i = request_data.find('HTTP/')
-    if request_data.startswith('GET'):
-        print('GET request.')
-        path = request_data[5:i].strip()
-        if path.startswith('teleop/'):
-            print('jetbot command:' + path)
-            handle_command(path)
-        elif path.startswith('info/'):
-            rsp = get_info(path)
-        else:
-            print('not service request.' + path)
-            client.close()
-            return
-    elif request_data.startswith('POST'):
-        print('POST request.')
-        path = request_data[6:i].strip()
-        if path.startswith('teleop/'):
-            print('jetbot command:' + path)
-            handle_command(path)
-        elif path.startswith('info/'):
-            rsp = get_info(path)
-        else:
-            print('not service request.' + path)
-            client.close()
-            return
-    else:
-        print('not support http method, only [GET][POST] support.')
-        client.close()
-        return
+    # i = request_data.find('HTTP/')
+    # if request_data.startswith('GET'):
+    #     print('GET request.')
+    #     path = request_data[5:i].strip()
+    #     if path.startswith('teleop/'):
+    #         print('jetbot command:' + path)
+    #         handle_command(path)
+    #     elif path.startswith('info/'):
+    #         rsp = get_info(path)
+    #     else:
+    #         print('not service request.' + path)
+    #         client.close()
+    #         return
+    # elif request_data.startswith('POST'):
+    #     print('POST request.')
+    #     path = request_data[6:i].strip()
+    #     if path.startswith('teleop/'):
+    #         print('jetbot command:' + path)
+    #         handle_command(path)
+    #     elif path.startswith('info/'):
+    #         rsp = get_info(path)
+    #     else:
+    #         print('not service request.' + path)
+    #         client.close()
+    #         return
+    # else:
+    #     print('not support http method, only [GET][POST] support.')
+    #     client.close()
+    #     return
 
     # 构造响应数据
-    response_start_line = "HTTP/1.1 200 OK\r\n"
-    response_headers = "Server: jetbot teleop http\r\n"
-    response_headers += 'Access-Control-Allow-Headers: Content-Type,Authorization,session_id\r\n'
-    response_headers += 'Access-Control-Allow-Methods: GET,PUT,POST,DELETE,OPTIONS,HEAD\r\n'
-    response_headers += 'Access-Control-Allow-Origin: *\r\n'
-
-    response = response_start_line + response_headers + "\r\n" + rsp
-
-    # 向客户端返回响应数据
-    print('response success.')
-    client.send(bytes(response, "utf-8"))
-
-    # 关闭客户端连接
-    client.close()
+    # response_start_line = "HTTP/1.1 200 OK\r\n"
+    # response_headers = "Server: jetbot teleop http\r\n"
+    # response_headers += 'Access-Control-Allow-Headers: Content-Type,Authorization,session_id\r\n'
+    # response_headers += 'Access-Control-Allow-Methods: GET,PUT,POST,DELETE,OPTIONS,HEAD\r\n'
+    # response_headers += 'Access-Control-Allow-Origin: *\r\n'
+    #
+    # response = response_start_line + response_headers + "\r\n" + rsp
+    #
+    # # 向客户端返回响应数据
+    # print('response success.')
+    # client.send(bytes(response, "utf-8"))
+    #
+    # # 关闭客户端连接
+    # client.close()
 
 
 def get_info(path):
@@ -141,7 +144,7 @@ def handle_command(path):
 
 if __name__ == "__main__":
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind(("10.70.10.112", 8000))
+    server_socket.bind(("localhost", 9090))
     server_socket.listen(128)
     print('server start success.')
     robot = None
@@ -151,4 +154,5 @@ if __name__ == "__main__":
         print("[%s, %s] user connect success." % client_address)
         handle_client_process = Process(target=handle_client, args=(client_socket,))
         handle_client_process.start()
+        print 'socket close.'
         client_socket.close()
